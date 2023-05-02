@@ -7,6 +7,8 @@
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{fancyhdr}
+\usepackage{lipsum}
+
 \usepackage{tcolorbox}
 % \definecolor{mycolor1}{rgb}{0.545, 0.278, 0.208}
 % \definecolor{mycolor2}{rgb}{0.949, 0.949, 0.949}
@@ -102,6 +104,8 @@
 % ====================================================================
 % Authors and change record
 \newpage
+\pagestyle{fancy}
+
 \noindent
 {\Large \bf Authors}
 \medskip
@@ -137,7 +141,7 @@
 % ====================================================================
 % Table of contents
 \newpage
-\tableofcontents
+\tableofcontents \thispagestyle{fancy}
 
 
 % ====================================================================
@@ -151,13 +155,12 @@
 % ====================================================================
 % List of requirements
 \newpage
-\listofreq
+\listofreq \thispagestyle{fancy}
 
 % List of questions
-\listofquestion
+\listofquestion \thispagestyle{fancy}
 
 
 \label{LastPage}
 
 \end{document}
-
