@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+
+
+\newcommand{\esodoctitle}{CUBES Instrument Software Design Description}
+\newcommand{\esodocnumber}{CUBES-123-456-789}
+\newcommand{\esodocversion}{0.1}
+\newcommand{\esodoctype}{Specification}
+\newcommand{\esodocstatus}{Draft}  % Released
+\newcommand{\esodocorganization}{CUBES Consortium}
+\newcommand{\esodocreleasedate}{2023-12-31}
+\newcommand{\esodocclassification}{CUBES Consortium Internal\newline[Confidential for non-CUBES staff]}
+\newcommand{\esoreqprefix}{R-CUB-}
+
+\include{esopreamble.tex}
+
+
+\begin{document}
+
+% Title page
+\esotitlepage{
+\begin{center}
+  \begin{tabular}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
+    \hline
+    {\bf \small Prepared by:} &  Giorgio Calderone (CUBES SSE) &  \\[0.8cm] \hline
+    {\bf \small Apporved by:} &  Roberto Cirami (CUBES PM)     &  \\[0.8cm] \hline
+    {\bf \small Released by:} &  Roberto Cirami (CUBES PM)     &  \\[0.8cm] \hline
+    \end{tabular}
+\end{center}
+}
+
+\esoheader{}
+
+\noindent
+{\Large \bf Authors}
+\medskip
+
+\noindent
+\begin{tabular}{ |p{0.3\textwidth}|p{0.7\textwidth}| }
+  \hline
+      {\bf Name} & {\bf Affiliation}\\
+      \hline
+      Giorgio Calderone     & INAF-Osservatorio Astronomico di Trieste \\
+      Paolo Di Marcantonio  & INAF-Osservatorio Astronomico di Trieste \\
+      Ingo Stilz            & LSW - Zentrum für Astronomie der Universität Heidelberg \\
+      Xiaofeng Gao          & UK Astronomy Technology Centre (STFC), Royal Observatory Edinburgh\\
+      \hline
+\end{tabular}
+
+\vspace{3cm}
+
+\noindent
+{\Large \bf Change Record from previous versions}
+\medskip
+
+\noindent
+\begin{tabular}{ |p{0.3\textwidth}|p{0.7\textwidth}| }
+  \hline
+      {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\
+      \hline
+       & \\
+      \hline
+\end{tabular}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\include{introduction.tex}
+\include{related_documents.tex}
+\include{section.tex}
+
+\newpage
+
+% List of requirements
+\listofreq
+
+% List of questions
+\listofquestion
+
+
+\label{LastPage}
+
+\end{document}
+
