@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{fancyhdr}
+\include{ESODefinitions.tex}
+
+
+% Select Arial font for the whole document
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Document geometry
+\usepackage[a4paper, includehead,
+  textwidth=16cm, textheight=23cm,
+  headheight=2.7cm,
+  %showframe,
+]{geometry}
+
+
+% Document properties
+\newcommand{\ESOdoctitle}{CUBES Instrument Software Design Description}
+\newcommand{\ESOdocnumber}{CUBES-123-456-789}
+\newcommand{\ESOdocversion}{0.1}
+\newcommand{\ESOdoctype}{Specification}
+\newcommand{\ESOdocstatus}{Draft}  % Released
+\newcommand{\ESOdocorganization}{CUBES Consortium}
+\newcommand{\ESOdocreleasedate}{2023-12-31}
+\newcommand{\ESOdocclassification}{CUBES Consortium Internal\newline[Confidential for non-CUBES staff]}
+\newcommand{\ESOreqprefix}{R-CUB-}
+
+
+\begin{document}
+
+
+% ====================================================================
+% Running header
+%
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\renewcommand{\headruleskip}{1.2mm}
+\fancyhead[L]{
+  \begin{tabular}{m{0.12\headwidth}p{0.34\headwidth}}
+    \includegraphics[width=2.2cm]{media/header_logo.jpg}  &  {\small \ESOdoctitle{}}\\
+  \end{tabular}
+}
+\fancyhead[R]{
+    \footnotesize
+    \begin{tabular}{|p{0.2\headwidth}|p{0.21\headwidth}|}
+      \hline
+        {Document number:}         &      \ESOdocnumber{}     \\\hline
+        {Document verision:}       &      \ESOdocversion{}    \\\hline
+        {Document status:}         &      \ESOdocstatus{}     \\\hline
+        {Released on:}             &      \ESOdocreleasedate  \\\hline
+        {Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
+    \end{tabular}
+}
+
+
+% ====================================================================
+% Title page
+%
+\thispagestyle{empty}
+\begingroup
+%\setlength{\tabcolsep}{10pt}       % Default value: 6pt
+\renewcommand{\arraystretch}{1.5}   % Default value: 1
+\begin{center}
+  \begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}|}
+    \hline
+        {\bf \small Document title:}          & {\bf \ESOdoctitle{}}         \\[0.8cm] \hline
+        {\bf \small Document number:}         &      \ESOdocnumber{}         \\[0.8cm] \hline
+        {\bf \small Document verision:}       &      \ESOdocversion{}        \\[0.8cm] \hline
+        {\bf \small Document type:}           &      \ESOdoctype{}           \\[0.8cm] \hline
+        {\bf \small Document status:}         &      \ESOdocstatus{}         \\[0.8cm] \hline
+        {\bf \small Releasing organization:}  &      \ESOdocorganization{}   \\[0.8cm] \hline
+        {\bf \small Released on:}             &      \ESOdocreleasedate      \\[0.8cm] \hline
+        {\bf \small Document classification:} &      \ESOdocclassification{} \\[0.8cm] \hline
+  \end{tabular}
+\end{center}
+
+\vspace{3cm}
+
+\begin{center}
+  \begin{tabular}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
+    \hline
+    {\bf \small Prepared by:} &  Giorgio Calderone (CUBES SSE) &  \\[0.8cm] \hline
+    {\bf \small Apporved by:} &  Roberto Cirami (CUBES PM)     &  \\[0.8cm] \hline
+    {\bf \small Released by:} &  Roberto Cirami (CUBES PM)     &  \\[0.8cm] \hline
+    \end{tabular}
+\end{center}
+
+\endgroup
+
+\newpage
+
+
+% ====================================================================
+% Authors and change record
+\noindent
+{\Large \bf Authors}
+\medskip
+
+\noindent
+\begin{tabular}{ |p{0.3\textwidth}|p{0.7\textwidth}| }
+  \hline
+      {\bf Name} & {\bf Affiliation}\\
+      \hline
+      Giorgio Calderone     & INAF-Osservatorio Astronomico di Trieste \\
+      Paolo Di Marcantonio  & INAF-Osservatorio Astronomico di Trieste \\
+      Ingo Stilz            & LSW - Zentrum für Astronomie der Universität Heidelberg \\
+      Xiaofeng Gao          & UK Astronomy Technology Centre (STFC), Royal Observatory Edinburgh\\
+      \hline
+\end{tabular}
+
+\vspace{3cm}
+
+\noindent
+{\Large \bf Change Record from previous versions}
+\medskip
+
+\noindent
+\begin{tabular}{ |p{0.3\textwidth}|p{0.7\textwidth}| }
+  \hline
+      {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\
+      \hline
+       & \\
+      \hline
+\end{tabular}
+
+\newpage
+
+% ====================================================================
+% Tabke of contents
+\tableofcontents
+
+\newpage
+
+% ====================================================================
+% Document contents
+\include{introduction.tex}
+\include{related_documents.tex}
+\include{section.tex}
+
+\newpage
+
+% ====================================================================
+% List of requirements
+\listofreq
+
+% List of questions
+\listofquestion
+
+
+\label{LastPage}
+
+\end{document}
+
