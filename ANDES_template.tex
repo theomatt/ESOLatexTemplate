@@ -36,7 +36,7 @@
 \newcommand{\ESOdocstatus}{Draft}  % Released
 \newcommand{\ESOdocorganization}{ANDES Consortium}
 \newcommand{\ESOdocreleasedate}{2023-12-31}
-\newcommand{\ESOdocclassification}{ANDES Consortium Internal\newline[Confidential for non-ANDES staff]}
+\newcommand{\ESOdocclassification}{ANDES Consortium Internal [Confidential for non-ANDES staff]}
 \newcommand{\ESOreqprefix}{R-AND-}
 
 
@@ -62,6 +62,10 @@
         {Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
     \end{tabular}
 }
+\fancyfoot[c]{
+  \footnotesize Document classification:  \ESOdocclassification{}
+}
+
 
 
 % ====================================================================
