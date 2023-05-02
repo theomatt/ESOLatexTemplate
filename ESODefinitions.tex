@@ -1,7 +1,8 @@
-% AD and RD entries
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
+\usepackage{tocloft}
 
+% AD and RD entries
 \newenvironment{ADlist}
                {\begin{enumerate}[start=1,label={AD\arabic*}]}  % \bfseries
                {\end{enumerate}}               
@@ -13,7 +14,6 @@
 
 
 % List of requirements
-\usepackage{tocloft}
 \newcommand{\listreqname}{List of Requirements:}
 \newlistof{req}{toreq}{\listreqname}
 \newcommand{\req}[2]{%

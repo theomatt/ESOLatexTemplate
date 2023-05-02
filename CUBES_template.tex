@@ -7,8 +7,9 @@
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{fancyhdr}
-\include{ESODefinitions.tex}
-
+\usepackage{tcolorbox}
+% \definecolor{mycolor1}{rgb}{0.545, 0.278, 0.208}
+% \definecolor{mycolor2}{rgb}{0.949, 0.949, 0.949}
 
 % Select Arial font for the whole document
 \usepackage{helvet}
@@ -21,9 +22,12 @@
   %showframe,
 ]{geometry}
 
+\include{ESODefinitions.tex}
 
+% ====================================================================
 % Document properties
-\newcommand{\ESOdoctitle}{CUBES Instrument Software Design Description}
+%
+\newcommand{\ESOdoctitle}{CUBES Document Title}
 \newcommand{\ESOdocnumber}{CUBES-123-456-789}
 \newcommand{\ESOdocversion}{0.1}
 \newcommand{\ESOdoctype}{Specification}
@@ -35,8 +39,6 @@
 
 
 \begin{document}
-
-
 % ====================================================================
 % Running header
 %
@@ -88,19 +90,18 @@
 \begin{center}
   \begin{tabular}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
     \hline
-    {\bf \small Prepared by:} &  Giorgio Calderone (CUBES SSE) &  \\[0.8cm] \hline
-    {\bf \small Apporved by:} &  Roberto Cirami (CUBES PM)     &  \\[0.8cm] \hline
-    {\bf \small Released by:} &  Roberto Cirami (CUBES PM)     &  \\[0.8cm] \hline
+    {\bf \small Prepared by:} &  Howard Wolowitz               &  \\[0.8cm] \hline
+    {\bf \small Apporved by:} &  Rajesh Ramayan Koothrappali   &  \\[0.8cm] \hline
+    {\bf \small Released by:} &  Leonard Hofstadter            &  \\[0.8cm] \hline
     \end{tabular}
 \end{center}
 
 \endgroup
 
-\newpage
-
 
 % ====================================================================
 % Authors and change record
+\newpage
 \noindent
 {\Large \bf Authors}
 \medskip
@@ -110,10 +111,10 @@
   \hline
       {\bf Name} & {\bf Affiliation}\\
       \hline
-      Giorgio Calderone     & INAF-Osservatorio Astronomico di Trieste \\
-      Paolo Di Marcantonio  & INAF-Osservatorio Astronomico di Trieste \\
-      Ingo Stilz            & LSW - Zentrum für Astronomie der Universität Heidelberg \\
-      Xiaofeng Gao          & UK Astronomy Technology Centre (STFC), Royal Observatory Edinburgh\\
+      Howard Wolowitz                 & California Institute of Technology, (CA, USA)\\
+      Rajesh Ramayan Koothrappali     & California Institute of Technology, (CA, USA)\\
+      Leonard Hofstadter              & California Institute of Technology, (CA, USA)\\
+      Sheldon Cooper                  & California Institute of Technology, (CA, USA)\\
       \hline
 \end{tabular}
 
@@ -132,24 +133,24 @@
       \hline
 \end{tabular}
 
-\newpage
 
 % ====================================================================
-% Tabke of contents
+% Table of contents
+\newpage
 \tableofcontents
 
-\newpage
 
 % ====================================================================
 % Document contents
+\newpage
 \include{introduction.tex}
 \include{related_documents.tex}
 \include{section.tex}
 
-\newpage
 
 % ====================================================================
 % List of requirements
+\newpage
 \listofreq
 
 % List of questions
