@@ -23,4 +23,4 @@ To compile into a PDF file:
 ```
 pdflatex CUBES_InstrumentSoftwareRequirements.tex
 ```
-You may need to run the commands several times to get correct references.
+You may need to run the command multiple times to get the correct references.
