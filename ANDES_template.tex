@@ -5,6 +5,10 @@
 \usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
 \usepackage{multirow}
 \usepackage{tabularx}
+
+% redefine the X column to be based on a m-column instead of a p-column
+\renewcommand\tabularxcolumn[1]{m{#1}}
+
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{fancyhdr}
@@ -53,20 +57,20 @@
 \fancyfoot{} % clear all footer fields
 
 \fancyhead[L]{
-  \begin{tabular}{m{0.12\headwidth}p{0.34\headwidth}}
+  \begin{tabularx}{0.46\headwidth}{Xc}
     \includegraphics[width=2.2cm]{media/ANDES_logo.jpg}  &  {\small \ESOdoctitle{}}\\
-  \end{tabular}
+  \end{tabularx}
 }
 \fancyhead[R]{
   \begingroup
   \setlength{\arrayrulewidth}{0mm} % remove table border
   \footnotesize
-  \begin{tabular}{|p{0.15\headwidth}|p{0.28\headwidth}|}
+  \begin{tabularx}{0.48\headwidth}{|X|l|}
     \hline
         {\scriptsize Document number:}         &      \ESOdocnumber{}     \\\hline
         {\scriptsize Document version:}        &      \ESOdocversion{}    \\\hline
         {\scriptsize Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
-  \end{tabular}
+  \end{tabularx}
   \endgroup
 }
 \fancyfoot[c]{
@@ -81,21 +85,21 @@
 \newgeometry{headheight=0cm, textheight=25cm}
 \begin{center}
   \begin{tcolorbox}[colframe=white, colback=white, width=0.7\textwidth]
-    \begin{tabular}{m{0.35\textwidth}m{0.4\textwidth}}
+    \begin{tabularx}{0.8\textwidth}{XX}
       \includegraphics[width=3cm]{media/ANDES_logo.jpg}  &
-                      {\footnotesize Programme: {\bf ESO-ELT}}
+                      {\footnotesize \mbox{Programme: {\bf ESO-ELT}}}  % \mbox avoids word and line breaks
 
                       \medskip
 
                       {\footnotesize Project: {\bf ANDES}}\\
-    \end{tabular}
+    \end{tabularx}
   \end{tcolorbox}
 \end{center}
 
 \vspace{3cm}
 
 \begin{center}
-  \begin{tcolorbox}[colframe=andesbrown, colback=andesgray, width=0.8\textwidth]
+  \begin{tcolorbox}[colframe=andesbrown, colback=andesgray, width=0.9\textwidth]
     \
 
     \begin{center}

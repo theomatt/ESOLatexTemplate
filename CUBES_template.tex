@@ -5,6 +5,10 @@
 \usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
 \usepackage{multirow}
 \usepackage{tabularx}
+
+% redefine the X column to be based on a m-column instead of a p-column
+\renewcommand\tabularxcolumn[1]{m{#1}}
+
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{fancyhdr}
@@ -43,7 +47,6 @@
 \newcommand{\ESOdocclassification}{CUBES Consortium Internal\newline[Confidential for non-CUBES staff]}
 \newcommand{\ESOreqprefix}{R-CUB-}
 
-
 \begin{document}
 % ====================================================================
 % Running header
@@ -53,20 +56,20 @@
 \fancyfoot{} % clear all footer fields
 
 \fancyhead[L]{
-  \begin{tabular}{m{0.12\headwidth}p{0.34\headwidth}}
+  \begin{tabularx}{0.46\headwidth}{Xc}
     \includegraphics[width=2.2cm]{media/CUBES_logo.jpg}  &  {\small \ESOdoctitle{}}\\
-  \end{tabular}
+  \end{tabularx}
 }
 \fancyhead[R]{
     \footnotesize
-    \begin{tabular}{|p{0.2\headwidth}|p{0.21\headwidth}|}
+    \begin{tabularx}{0.48\headwidth}{|X|l|}
       \hline
         {Document number:}         &      \ESOdocnumber{}     \\\hline
         {Document version:}        &      \ESOdocversion{}    \\\hline
         {Document status:}         &      \ESOdocstatus{}     \\\hline
         {Released on:}             &      \ESOdocreleasedate  \\\hline
         {Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
-    \end{tabular}
+    \end{tabularx}
 }
 
 
@@ -89,14 +92,14 @@
   \end{tabularx}
 \end{center}
 
-\vspace{3cm}
+\vfill
 
 \begin{center}
-  \begin{tabularx}{\textwidth}{|l|X|l|}
+  \begin{tabularx}{\textwidth}{|l|X|c|}
     \hline
-    {\bf \small Prepared by:} &  Howard Wolowitz               & \textcolor{gray}{Signature} \\[0.8cm] \hline
-    {\bf \small Approved by:} &  Rajesh Ramayan Koothrappali   & \textcolor{gray}{Signature} \\[0.8cm] \hline
-    {\bf \small Released by:} &  Leonard Hofstadter            & \textcolor{gray}{Signature} \\[0.8cm] \hline
+    {\bf \small Prepared by:} &  Howard Wolowitz               & \hspace{0.5cm} \textcolor{gray}{Signature} \hspace{0.5cm} \ \\[0.8cm] \hline
+    {\bf \small Approved by:} &  Rajesh Ramayan Koothrappali   &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
+    {\bf \small Released by:} &  Leonard Hofstadter            &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
   \end{tabularx}
 \end{center}
 
