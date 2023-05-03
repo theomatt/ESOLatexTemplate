@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
 \usepackage{multirow}
+\usepackage{tabularx}
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{fancyhdr}
@@ -20,7 +21,10 @@
 % Document geometry
 \usepackage[a4paper, includehead,
   textwidth=16cm, textheight=23cm,
-  headheight=2.7cm,
+  headheight=2.3cm,
+  includemp,
+  marginparsep=0.cm,
+  marginparwidth=0.cm,
   %showframe,
 ]{geometry}
 
@@ -30,9 +34,9 @@
 % Document properties
 %
 \newcommand{\ESOdoctitle}{ANDES Document Title}
-\newcommand{\ESOdocnumber}{ANDES-123-456-789}
+\newcommand{\ESOdocnumber}{E-AND-XX-YYY-CC-CC-000}
 \newcommand{\ESOdocversion}{0.1}
-\newcommand{\ESOdoctype}{Specification}
+\newcommand{\ESOdoctype}{YYY}
 \newcommand{\ESOdocstatus}{Draft}  % Released
 \newcommand{\ESOdocorganization}{ANDES Consortium}
 \newcommand{\ESOdocreleasedate}{2023-12-31}
@@ -47,40 +51,43 @@
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
 \fancyfoot{} % clear all footer fields
-\renewcommand{\headruleskip}{1.2mm}
+
 \fancyhead[L]{
   \begin{tabular}{m{0.12\headwidth}p{0.34\headwidth}}
     \includegraphics[width=2.2cm]{media/ANDES_logo.jpg}  &  {\small \ESOdoctitle{}}\\
   \end{tabular}
 }
 \fancyhead[R]{
-    \footnotesize
-    \begin{tabular}{|p{0.2\headwidth}|p{0.21\headwidth}|}
-      \hline
-        {Document number:}         &      \ESOdocnumber{}     \\\hline
-        {Document version:}        &      \ESOdocversion{}    \\\hline
-        {Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
-    \end{tabular}
+  \begingroup
+  \setlength{\arrayrulewidth}{0mm} % remove table border
+  \footnotesize
+  \begin{tabular}{|p{0.15\headwidth}|p{0.28\headwidth}|}
+    \hline
+        {\scriptsize Document number:}         &      \ESOdocnumber{}     \\\hline
+        {\scriptsize Document version:}        &      \ESOdocversion{}    \\\hline
+        {\scriptsize Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
+  \end{tabular}
+  \endgroup
 }
 \fancyfoot[c]{
   \footnotesize Document classification:  \ESOdocclassification{}
 }
 
 
-
 % ====================================================================
 % Title page
 %
 \thispagestyle{empty}
+\newgeometry{headheight=0cm, textheight=25cm}
 \begin{center}
-  \begin{tcolorbox}[colframe=gray, colback=white, width=0.7\textwidth]
-    \begin{tabular}{m{0.3\textwidth}m{0.4\textwidth}}
+  \begin{tcolorbox}[colframe=white, colback=white, width=0.7\textwidth]
+    \begin{tabular}{m{0.35\textwidth}m{0.4\textwidth}}
       \includegraphics[width=3cm]{media/ANDES_logo.jpg}  &
-                      {\small Programme: {\bf ESO-ELT}}
+                      {\footnotesize Programme: {\bf ESO-ELT}}
 
                       \medskip
 
-                      {\small Project: {\bf ANDES}}\\
+                      {\footnotesize Project: {\bf ANDES}}\\
     \end{tabular}
   \end{tcolorbox}
 \end{center}
@@ -115,13 +122,17 @@
 \vfill
 
 \begin{center}
-  \begin{tabular}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
+  \begin{tabularx}{\textwidth}{|l|X|l|l|}
     \hline
-    {\bf \small Prepared by:} &  Howard Wolowitz               &  \\[0.8cm] \hline
-    {\bf \small Apporved by:} &  Rajesh Ramayan Koothrappali   &  \\[0.8cm] \hline
-    {\bf \small Released by:} &  Leonard Hofstadter            &  \\[0.8cm] \hline
-    \end{tabular}
+    {\bf \small Owner:}       &  Howard Wolowitz               & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
+    {\bf \small Approved by:} &  Rajesh Ramayan Koothrappali   & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
+    {\bf \small Released by:} &  Leonard Hofstadter            & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
+    \end{tabularx}
 \end{center}
+
+
+\restoregeometry
+
 
 
 % ====================================================================
@@ -134,7 +145,7 @@
 \medskip
 
 \noindent
-\begin{tabular}{ |p{0.3\textwidth}|p{0.7\textwidth}| }
+\begin{tabularx}{\textwidth}{|l|X|}
   \hline
       {\bf Name} & {\bf Affiliation}\\
       \hline
@@ -143,7 +154,7 @@
       Leonard Hofstadter              & California Institute of Technology, (CA, USA)\\
       Sheldon Cooper                  & California Institute of Technology, (CA, USA)\\
       \hline
-\end{tabular}
+\end{tabularx}
 
 \vspace{3cm}
 
@@ -152,13 +163,13 @@
 \medskip
 
 \noindent
-\begin{tabular}{ |p{0.3\textwidth}|p{0.7\textwidth}| }
+\begin{tabularx}{\textwidth}{|l|X|}
   \hline
       {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\
       \hline
        & \\
       \hline
-\end{tabular}
+\end{tabularx}
 
 
 % ====================================================================
