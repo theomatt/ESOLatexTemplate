@@ -1,0 +1,57 @@
+% ====================================================================
+% Running header
+%
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+
+\fancyhead[L]{
+  \begin{tabularx}{0.46\headwidth}{Xc}
+    \includegraphics[width=2.2cm]{media/CUBES_logo.jpg}  &  {\small \ESOdoctitle{}}\\
+  \end{tabularx}
+}
+\fancyhead[R]{
+    \footnotesize
+    \begin{tabularx}{0.48\headwidth}{|X|l|}
+      \hline
+        {Document number:}         &      \ESOdocnumber{}     \\\hline
+        {Document version:}        &      \ESOdocversion{}    \\\hline
+        {Document status:}         &      \ESOdocstatus{}     \\\hline
+        {Released on:}             &      \ESOdocreleasedate  \\\hline
+        {Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
+    \end{tabularx}
+}
+
+
+% ====================================================================
+% Title page
+%
+\thispagestyle{empty}
+\newgeometry{headheight=0cm, textheight=25cm}
+\begin{center}
+  \begin{tabularx}{\textwidth}{|X|X|}
+    \hline
+        {\bf \small Document title:}          & {\bf \ESOdoctitle{}}         \\[0.8cm] \hline
+        {\bf \small Document number:}         &      \ESOdocnumber{}         \\[0.8cm] \hline
+        {\bf \small Document verision:}       &      \ESOdocversion{}        \\[0.8cm] \hline
+        {\bf \small Document type:}           &      \ESOdoctype{}           \\[0.8cm] \hline
+        {\bf \small Document status:}         &      \ESOdocstatus{}         \\[0.8cm] \hline
+        {\bf \small Releasing organization:}  &      \ESOdocorganization{}   \\[0.8cm] \hline
+        {\bf \small Released on:}             &      \ESOdocreleasedate      \\[0.8cm] \hline
+        {\bf \small Document classification:} &      \ESOdocclassification{} \\[0.8cm] \hline
+  \end{tabularx}
+\end{center}
+
+\vfill
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{|l|X|c|}
+    \hline
+    {\bf \small Prepared by:} &  \ESOowner{}                & \hspace{0.5cm} \textcolor{gray}{Signature} \hspace{0.5cm} \ \\[0.8cm] \hline
+    {\bf \small Approved by:} &  \ESOapprovedby{}           &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
+    {\bf \small Released by:} &  \ESOreleasedby{}           &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
+  \end{tabularx}
+\end{center}
+
+
+\restoregeometry
