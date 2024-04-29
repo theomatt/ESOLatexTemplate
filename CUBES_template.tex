@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
+\usepackage{hyperref} % \hypersetup{hidelinks=true}  % avoid colored box in links
 \usepackage{multirow}
 \usepackage{tabularx}
 
@@ -46,6 +46,9 @@
 \newcommand{\ESOdocreleasedate}{2023-12-31}
 \newcommand{\ESOdocclassification}{CUBES Consortium Internal\newline[Confidential for non-CUBES staff]}
 \newcommand{\ESOreqprefix}{R-CUB-}
+\newcommand{\ESOowner}{TBD Owner}
+\newcommand{\ESOapprovedby}{TBD ApprovedBy}
+\newcommand{\ESOreleasedby}{TBD ReleasedBy}
 
 \begin{document}
 % ====================================================================
@@ -97,9 +100,9 @@
 \begin{center}
   \begin{tabularx}{\textwidth}{|l|X|c|}
     \hline
-    {\bf \small Prepared by:} &  Howard Wolowitz               & \hspace{0.5cm} \textcolor{gray}{Signature} \hspace{0.5cm} \ \\[0.8cm] \hline
-    {\bf \small Approved by:} &  Rajesh Ramayan Koothrappali   &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
-    {\bf \small Released by:} &  Leonard Hofstadter            &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
+    {\bf \small Prepared by:} &  \ESOowner{}                & \hspace{0.5cm} \textcolor{gray}{Signature} \hspace{0.5cm} \ \\[0.8cm] \hline
+    {\bf \small Approved by:} &  \ESOapprovedby{}           &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
+    {\bf \small Released by:} &  \ESOreleasedby{}           &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
   \end{tabularx}
 \end{center}
 
@@ -122,11 +125,9 @@
   \hline
       {\bf Name} & {\bf Affiliation}\\
       \hline
-      Howard Wolowitz                 & California Institute of Technology, (CA, USA)\\
-      Rajesh Ramayan Koothrappali     & California Institute of Technology, (CA, USA)\\
-      Leonard Hofstadter              & California Institute of Technology, (CA, USA)\\
-      Sheldon Cooper                  & California Institute of Technology, (CA, USA)\\
-      \hline
+      Name Surname 1     & Institute 1 \\ \hline
+      Name Surname 2     & Institute 2 \\ \hline
+      ...                & ...         \\ \hline
 \end{tabularx}
 
 \vspace{3cm}
@@ -138,10 +139,8 @@
 \noindent
 \begin{tabularx}{\textwidth}{|l|X|}
   \hline
-      {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\
-      \hline
-       & \\
-      \hline
+      {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\  \hline
+      Sect.~\ref{sec:scope}&  Minor changes \\ \hline
 \end{tabularx}
 
 
