@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{hyperref}  \hypersetup{hidelinks=true}  % avoid colored box in links
+\usepackage{hyperref} % \hypersetup{hidelinks=true}  % avoid colored box in links
 \usepackage{multirow}
 \usepackage{tabularx}
 
@@ -99,11 +99,11 @@
 \vspace{3cm}
 
 \begin{center}
-  \begin{tcolorbox}[colframe=andesbrown, colback=andesgray, width=0.9\textwidth]
+  \begin{tcolorbox}[colframe=andesbrown, colback=andesgray, width=\textwidth]
     \
 
     \begin{center}
-      {\bf \large \textcolor{andesbrown} \ESOdoctitle{} }
+      {\bf \Large \bigskip \textcolor{andesbrown} \ESOdoctitle{} }
     \end{center}
 
     \bigskip
@@ -111,15 +111,24 @@
 
     {\bf Document number:} \ESOdocnumber{}
 
-    \
+    \medskip
 
     {\bf Document verision:} \ESOdocversion{}
 
+    \smallskip
+
     {\bf Document type:} \ESOdoctype{}
+
+    \smallskip
 
     {\bf Document status:} \ESOdocstatus{}
 
+    \smallskip
+
     {\bf Releasing organization:} \ESOdocorganization{}
+
+    \bigskip
+
   \end{tcolorbox}
 \end{center}
 
