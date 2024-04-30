@@ -45,11 +45,12 @@
 \vfill
 
 \begin{center}
-  \begin{tabularx}{\textwidth}{|l|X|c|}
+  \renewcommand{\arraystretch}{2.5}
+  \begin{tabularx}{\textwidth}{|l|X|l|c|}
     \hline
-    {\bf \small Prepared by:} &  \ESOowner{}                & \hspace{0.5cm} \textcolor{gray}{Signature} \hspace{0.5cm} \ \\[0.8cm] \hline
-    {\bf \small Approved by:} &  \ESOapprovedby{}           &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
-    {\bf \small Released by:} &  \ESOreleasedby{}           &                \textcolor{gray}{Signature}                  \\[0.8cm] \hline
+    {\bf \small Prepared by:} &  \ESOowner{}             & \parbox[c]{0.28\textwidth}{\includegraphics[width=0.28\textwidth]{media/signature_owner.jpg}}      & \ESOownerdate{}      \\ \hline
+    {\bf \small Approved by:} &  \ESOapprovedby{}        & \parbox[c]{0.28\textwidth}{\includegraphics[width=0.28\textwidth]{media/signature_approvedby.jpg}} & \ESOapprovedbydate{} \\ \hline
+    {\bf \small Released by:} &  \ESOreleasedby{}        & \parbox[c]{0.28\textwidth}{\includegraphics[width=0.28\textwidth]{media/signature_releasedby.jpg}} & \ESOreleasedbydate{} \\ \hline
   \end{tabularx}
 \end{center}
 

@@ -13,14 +13,18 @@
 \newcommand{\ESOdocclassification}{CUBES Consortium Internal\newline[Confidential for non-CUBES staff]}
 \newcommand{\ESOreqprefix}{R-CUB-}
 \newcommand{\ESOowner}{TBD Owner}
+\newcommand{\ESOownerdate}{2023-12-31}
 \newcommand{\ESOapprovedby}{TBD ApprovedBy}
+\newcommand{\ESOapprovedbydate}{2023-12-31}
 \newcommand{\ESOreleasedby}{TBD ReleasedBy}
+\newcommand{\ESOreleasedbydate}{2023-12-31}
 
 \include{_preamble.tex}
 
 \begin{document}
 
 \include{_title.tex}
+
 
 % ====================================================================
 % Authors and change record
@@ -32,13 +36,13 @@
 \medskip
 
 \noindent
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{tabularx}{\textwidth}{|l|X|X|}
   \hline
-      {\bf Name} & {\bf Affiliation}\\
+      \rowcolor{lightgray} {\bf Name} & {\bf Affiliation} & {\bf Role}\\
       \hline
-      Name Surname 1     & Institute 1 \\ \hline
-      Name Surname 2     & Institute 2 \\ \hline
-      ...                & ...         \\ \hline
+      Name Surname 1     & Institute 1 & Role 1\\ \hline
+      Name Surname 2     & Institute 2 & Role 2\\ \hline
+      ...                & ...         & ...   \\ \hline
 \end{tabularx}
 
 \vspace{3cm}
@@ -48,10 +52,10 @@
 \medskip
 
 \noindent
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{tabularx}{\textwidth}{|l|l|X|}
   \hline
-      {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\  \hline
-      Sect.~\ref{sec:scope}&  Minor changes \\ \hline
+      \rowcolor{lightgray} {\bf Version} & {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\  \hline
+      1.0 & Sect.~\ref{sec:scope} &  Minor changes \\ \hline
 \end{tabularx}
 
 
@@ -66,7 +70,7 @@
 \newpage
 \include{introduction.tex}
 \include{related_documents.tex}
-\include{section.tex}
+\include{example_section.tex}
 
 
 % ====================================================================

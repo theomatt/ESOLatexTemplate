@@ -1,33 +1,70 @@
 \section{Main matter}
 
-\subsection{Requirements}
-
 \lipsum[1]
 
-\req{req:nolights}{Switch off the lights.}
+\subsection{Requirements}
 
-\lipsum[2]
+\req{req:nolights}{Switch off the lights.}
 
 \req{req:generic_req}{Another requirement.}
 
 \subsection{Questions}
 
-\lipsum[3]
-
 \question{q:where}{Where is the coffee machine?}
-
-\lipsum[4]
 
 \question{q:when}{When is the coffee break scheduled?}
 
 
-\subsection{References}
+\subsection{Misc. examples}
 
-\lipsum[5]
+A quick introduction to \LaTeX{} is available \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{here}.
+
+
+\subsubsection{Equations}
+
+\begin{equation}
+  \label{eq:eq}
+  E = mc^2
+\end{equation}
+
+
+\subsubsection{Lists, footnotes, font types and sizes}
+
+\begin{itemize}
+\item {\bf bold};
+\item {\it italic};
+\item {\tt teletype};
+  \begin{itemize}
+  \item normal;\footnote{Footnote example.}
+  \end{itemize}
+\item {\sc Small caps}.
+\end{itemize}
+
+\begin{enumerate}
+\item {\tiny tiny};
+\item {\small small};
+\item {\large large};
+\item {\Large Large};
+  \begin{enumerate}
+  \item {\Huge Huge}.
+  \end{enumerate}
+\end{enumerate}
+
+
+\subsubsection{Verbatim text}
+
+\begin{verbatim}
+Text enclosed inside \texttt{verbatim} environment
+is printed in monospace font
+and all \LaTeX{} commands are ignored.
+\end{verbatim}
+
+
+\subsection{References}
 
 \begin{itemize}
 \item Sect.~\ref{sec:intro}, Sect.~\ref{sec:scope};
-\item \citedoc{AD:ESO-379353}, \citedoc{RD:ESO-363358};
+\item \citedoc{AD:ESO-123456}, \citedoc{RD:ESO-999999};
 \item \citereq{req:nolights}, \citereq{req:generic_req};
 \item \citequestion{q:where}, \citequestion{q:when};
 \item Tab.~\ref{tab:test}, Fig.~\ref{fig:m31}, Eq.~\ref{eq:eq};
@@ -35,8 +72,6 @@
 
 
 \subsection{Figures and tables}
-
-\lipsum[6]
 
 \begin{figure}[hbtp!]
   \centering
@@ -46,10 +81,9 @@
 \end{figure}
 
 
-\lipsum[7]
-
 \begin{table}[hbtp!]
   \centering
+  \caption{Table to test captions and labels.}
   \begin{tabularx}{\textwidth}{|X|X|X|}
     \hline
     \rowcolor{lightgray} \multicolumn{3}{|c|}{Country List} \\
@@ -66,6 +100,5 @@
     Angola & AO & AGO \\
     \hline
   \end{tabularx}
-  \caption{Table to test captions and labels.}
   \label{tab:test}
 \end{table}
