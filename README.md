@@ -6,7 +6,7 @@ Template to write CUBES documents using LaTeX.
 
 - Rename the main file (`Main.tex`) into the final document name, e.g.: `mv Main.tex CUBES_InstrumentSoftwareRequirements.tex`.
 - Modify the document properties at the beginning of the main file;
-- Insert images into the `media` folder, and insert text in `introduction.tex`, `related_documents.tex`, `section.tex`, etc.  You may also add new files to be included using the `\include{filename.tex}` command;
+- Insert images into the `media` folder, and insert text in `introduction.tex`, `related_documents.tex`, `example_section.tex`, etc.  You may also add new files to be included using the `\include{filename.tex}` command;
 - Use the provided environments and commands for specific tasks:
   - Applicable documents (`ADlist` environment and `\ARDitem` command);
   - Reference documents (`RDlist` environment and `\ARDitem` command);
