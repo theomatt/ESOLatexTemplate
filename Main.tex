@@ -1,0 +1,87 @@
+\documentclass[12pt,a4paper]{article}
+
+% ====================================================================
+% Document properties
+%
+\newcommand{\ESOdoctitle}{CUBES Document Title}
+\newcommand{\ESOdocnumber}{CUBES-123-456-789}
+\newcommand{\ESOdocversion}{0.1}
+\newcommand{\ESOdoctype}{Specification}
+\newcommand{\ESOdocstatus}{Draft}  % Released
+\newcommand{\ESOdocorganization}{CUBES Consortium}
+\newcommand{\ESOdocreleasedate}{\today}
+\newcommand{\ESOdocclassification}{CUBES Consortium Internal\newline[Confidential for non-CUBES staff]}
+\newcommand{\ESOreqprefix}{R-CUB-}
+\newcommand{\ESOowner}{TBD Owner}
+\newcommand{\ESOownerdate}{\today}
+\newcommand{\ESOapprovedby}{TBD ApprovedBy}
+\newcommand{\ESOapprovedbydate}{2023-12-31}
+\newcommand{\ESOreleasedby}{TBD ReleasedBy}
+\newcommand{\ESOreleasedbydate}{\today}
+
+\input{_preamble.tex}
+
+\begin{document}
+
+\input{_title.tex}
+
+
+% ====================================================================
+% Authors and change record
+\newpage
+\pagestyle{fancy}
+
+\noindent
+{\Large \bf Authors}
+\medskip
+
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|X|}
+  \hline
+      \rowcolor{lightgray} {\bf Name} & {\bf Affiliation} & {\bf Role}\\
+      \hline
+      Name Surname 1     & Institute 1 & Role 1\\ \hline
+      Name Surname 2     & Institute 2 & Role 2\\ \hline
+      ...                & ...         & ...   \\ \hline
+\end{tabularx}
+
+\vspace{3cm}
+
+\noindent
+{\Large \bf Change Record from previous versions}
+\medskip
+
+\noindent
+\begin{tabularx}{\textwidth}{|l|l|X|}
+  \hline
+      \rowcolor{lightgray} {\bf Version} & {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\  \hline
+      1.0 & Sect.~\ref{sec:scope} &  Minor changes \\ \hline
+\end{tabularx}
+
+
+% ====================================================================
+% Table of contents
+\newpage
+\tableofcontents \thispagestyle{fancy}
+
+
+% ====================================================================
+% Document contents
+\newpage
+\include{introduction.tex}
+\include{related_documents.tex}
+\include{example_section.tex}
+
+
+% ====================================================================
+% List of requirements
+\newpage
+\listofreq \thispagestyle{fancy}
+
+% List of questions
+\listofquestion \thispagestyle{fancy}
+
+
+\label{LastPage}  % <-- Don't cancel this line!!
+
+\end{document}
